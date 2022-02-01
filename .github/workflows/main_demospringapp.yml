@@ -51,3 +51,13 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5D97B982C0F4A0883D6D916A3CF4BD8 }}
           package: '*.jar'     
+  loadtest:
+    name: Load Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Azure Load Testing'
+        uses: azure/load-testing@v1
+        with:
+          loadTestConfigFile: 'SampleApp.yaml'
+          loadTestResource: 'SampleLoadInstance'
+          resourceGroup: 'Sample'
