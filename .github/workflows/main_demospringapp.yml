@@ -51,3 +51,10 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5D97B982C0F4A0883D6D916A3CF4BD8 }}
           package: '*.jar'
+      - name: Run TestPlan          
+        with:
+          testName: 'DemoSpringapp_2/1/2022_12:51:50PM'
+          testPlan: SampleTest.jmx
+          description: Load test website home page
+          engineInstances: 1        
+          failureCriteria: avg(response_time_ms) > 10   
