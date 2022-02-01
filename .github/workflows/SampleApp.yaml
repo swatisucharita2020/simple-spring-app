@@ -12,3 +12,6 @@ description: Load test website home page
 engineInstances: 1
 failureCriteria:
   - avg(response_time_ms) > 10
+secrets:
+  - name: my-secret
+    value: https://akv-contoso.vault.azure.net/secrets/MySecret
