@@ -1,12 +1,5 @@
- - name: Run TestPlan          
-        with:
-          testName: 'DemoSpringapp_2/1/2022_12:51:50PM'
-          testPlan: SampleTest.jmx
-          description: Load test website home page
-          engineInstances: 1        
-          failureCriteria: avg(response_time_ms) > 10   
 version: v0.1
-testName: SampleTest
+testName: DemoSpringapp_2/1/2022_12:51:50PM
 testPlan: SampleTest.jmx
 description: Load test website home page
 engineInstances: 1
